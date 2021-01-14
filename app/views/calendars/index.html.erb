@@ -10,9 +10,14 @@
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <% day[:month] %>/<% day[:date] %>
+          <%=day[:month] %>/<%=day[:date] %><%=day[:wday] %>
         </div>
+
+
+        <ul class='content'>
+
         <div class='content'>
+
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
             <div class='plan-list'>・<%= plan %></div>
